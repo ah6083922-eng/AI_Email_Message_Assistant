@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Email & Message Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>AI Email & Message Assistant</h1>
+        <p>Write smarter. Communicate better.</p>
+    </header>
+
+    <main class="container">
+
+        <h2>Your AI Writing Assistant</h2>
+        <p>Create professional emails and messages in seconds.</p>
+
+        <form id="assistantForm">
+
+            <label for="task">Choose Your Task</label>
+            <select id="task">
+                <option>Write Email</option>
+                <option>Write Message</option>
+                <option>Improve Text</option>
+                <option>Correct Grammar</option>
+            </select>
+
+            <label for="text">Enter Your Text</label>
+            <textarea id="text" placeholder="Write your email or message here..." required></textarea>
+
+            <label for="tone">Select Tone</label>
+            <select id="tone">
+                <option>Professional</option>
+                <option>Friendly</option>
+                <option>Formal</option>
+                <option>Casual</option>
+                <option>Polite</option>
+            </select>
+
+            <label for="language">Select Language</label>
+            <select id="language">
+                <option>English</option>
+                <option>Urdu</option>
+            </select>
+
+            <button type="submit" id="generateBtn">Generate with AI</button>
+
+        </form>
+
+        <section class="result-section">
+            <h2>AI Generated Result</h2>
+            <div id="result">Your generated content will appear here...</div>
+            <button id="copyBtn" type="button">Copy Result</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>AI Email & Message Assistant | Powered by Groq AI</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
